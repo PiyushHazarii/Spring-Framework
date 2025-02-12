@@ -5,19 +5,13 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import me.beans.Student;
 
+// here we cannot create property method to initialize the value rather than
+// we create a method in Student class that intialize the value and we 
+// provide the value to the init-mehtod and it will run smoothly
 public class Main {
 	public static void main(String[] args) {
 		ApplicationContext context = new ClassPathXmlApplicationContext("me/resources/applicationContext.xml");
-		
-//		by default this class is Prototype that is why we have seen the differ address for
-//		different times (tum kitna baar bhi object bana lo wo different address return karega)
 		Student student = (Student) context.getBean("std");
-		System.out.println(student);
-		
-		Student student2 = (Student) context.getBean("std");
-		System.out.println(student2);
-		
-		Student student3 = (Student) context.getBean("std");
-		System.out.println(student3);
+		student.display();	
 	}
 }

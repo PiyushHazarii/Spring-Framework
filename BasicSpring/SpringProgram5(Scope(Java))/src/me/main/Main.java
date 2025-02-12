@@ -10,9 +10,9 @@ import me.resources.stdConfig;
 
 public class Main {
 	public static void main(String[] args) {
-
-//		when we have multiple java config file then we have separate it with a comma(,)
-//		and get multiple beans
+		
+//		 agar scope singleton hai to single address return karega nhi to 
+//		 different object return karega 
 		ApplicationContext container = new 
 				AnnotationConfigApplicationContext(stdConfig.class);
 		
