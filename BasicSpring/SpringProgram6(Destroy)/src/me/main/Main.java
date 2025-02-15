@@ -6,9 +6,11 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import me.beans.Student;
 
-// here we cannot create property method to initialize the value rather than
-// we create a method in Student class that intialize the value and we 
-// provide the value to the init-mehtod and it will run smoothly
+
+// here we use a method name destroy that destroy the bean and we use 
+//AbstractApplicationContext and we call context.registerShutdownHook(); this 
+// method call destroy method and we also put the destroy-method in the application.xml file
+// so then our destroy method will invoked 
 public class Main {
 	public static void main(String[] args) {
 		AbstractApplicationContext context = new ClassPathXmlApplicationContext("me/resources/applicationContext.xml");

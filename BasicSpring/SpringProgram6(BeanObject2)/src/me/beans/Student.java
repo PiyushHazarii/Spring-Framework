@@ -32,6 +32,8 @@ public class Student {
 	public void display() {
 		System.out.println("Hello");
 	}
+	
+//	this is  static factory method and we dont have to create the object because it is static
 	public static Student studentObject() {
 		System.out.println("Static factory method");
 		return new Student(10);
