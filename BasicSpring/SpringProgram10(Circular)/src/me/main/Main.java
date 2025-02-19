@@ -9,7 +9,7 @@ import me.beans.Student;
 // in this we can achieve circular dependency that can only be achieved with 
 // setter based dependency because object are created earlier matlab 
 // object create ho jata hai pehele kyuki isme default constructor call ho raha hai 
-//and wo  object creation ka kaam kr raha hai
+// and wo  object creation ka kaam kr raha hai.
 public class Main {
 	public static void main(String[] args) {
 		ApplicationContext context = new ClassPathXmlApplicationContext("/me/resources/applicationContext.xml");

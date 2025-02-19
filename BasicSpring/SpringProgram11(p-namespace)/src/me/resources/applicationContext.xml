@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xmlns:p="http://www.springframework.org/schema/p"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <!--<bean class = "me.beans.Student" id = "std">
+    	<property name = "name" value = "Piyush"/>
+    	<property name = "rollno" value = "113"/>
+    	<property name = "marks" value = "91.2"/>
+    </bean>
+   -->
+   
+   <!--this is the alternative and basically easier way to set the data bus upar mein ek
+   schema paste krna hai aur kuch nhi  -->
+   
+   <!--<bean class = "me.beans.Student" id = "std"
+   		p:name="piyush"
+   		p:rollno="233"
+   		p:marks="92.3"
+   	/>-->
+   	
+   	<bean class = "me.beans.Address" id = "add"
+   		p:addName="Sukhi Bhavan"
+   		p:houseNo="233"
+   		p:city="Dhanbad"
+   		/>
+   	
+   	<!--if there is any class related to any another class then we have to use ref as shown below-->
+   	<bean class = "me.beans.Student" id = "std"
+   		p:name="piyush"
+   		p:rollno="233"
+   		p:marks="92.3"
+   		p:address-ref="add"
+   		/>
+   	
+   	
+</beans>

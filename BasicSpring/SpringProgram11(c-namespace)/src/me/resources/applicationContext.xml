@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:c="http://www.springframework.org/schema/c"
+
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+   
+  <!--<bean class = "me.beans.Student" id ="std">
+   		<constructor-arg value="Piyush"/>
+   		<constructor-arg value="222"/>
+   		<constructor-arg value="99.2"/>
+   </bean>
+   	-->
+   	
+   <!--this is the way in which we can insert value through c-namespace instead of constructor
+   in this readability is also good -->
+   	<bean class = "me.beans.Student" id ="std"
+   		c:name="piyush"
+   		c:rollno="113"
+   		c:marks="99"
+   	/>
+   	
+   	
+   	
+</beans>
