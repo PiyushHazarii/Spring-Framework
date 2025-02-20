@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+        <!--this is the we regularly use sara purana part hai ye to isme manually
+        autowiring achieve kiye hai -->
+        
+   <!-- <bean class = "me.beans.Address" id = "add">
+    	<property name = "addName" value = "Sukhi Bhawan"/>
+    	<property name = "houseNo" value = "113"/>
+    	<property name = "city" value = "Dhanbad"/>
+    </bean>
+        
+    <bean class = "me.beans.Student" id = "std">
+    	<property name = "name" value = "Piyush"/>
+    	<property name = "rollno" value = "113"/>
+    	<property name = "marks" value = "91.2"/>
+    	<property name = "address" ref = "add"/>
+    </bean>-->
+    
+    <bean class = "me.beans.Address" id = "address">
+    	<property name = "addName" value = "Sukhi Bhawan"/>
+    	<property name = "houseNo" value = "113"/>
+    	<property name = "city" value = "Dhanbad"/>
+    </bean>
+        
+        <!--yaha pr hum agar bytype use kr rahe hai to jo address ka reference le rahe hai
+        and jo id le rahe hai xml file mnein wo same rehna chaiye tab hi autowiring
+           achive ho payega figure mein byName hoga mistake se bytype ho gaya hai-->
+    <bean class = "me.beans.Student" id = "std" autowire="byName">
+    	<property name = "name" value = "Piyush"/>
+    	<property name = "rollno" value = "113"/>
+    	<property name = "marks" value = "91.2"/>
+    </bean>
+  
+   	
+</beans>
