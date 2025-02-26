@@ -8,10 +8,12 @@
     <!-- bean definitions here -->
     <bean class = "org.springframework.context.support.ResourceBundleMessageSource"
     			 id = "mgS">
+    			 <!--ye inbuilt method hai usme set kar rahe hai value  -->
     		<property name = "basename" value = "me/resources/MessageBundle"/>
     </bean>
     			 
     <bean class = "me.beans.Student" id= "std">
+    <!-- then uska reference hum yaha set kar rahe hai-->
     	<property name ="messageSource" ref ="mgS"/>
     </bean>
 
