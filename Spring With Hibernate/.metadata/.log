@@ -1,0 +1,26 @@
+!SESSION 2025-03-08 12:29:49.297 -----------------------------------------------
+eclipse.buildId=4.34.0.20241128-0756
+java.version=21.0.5
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_IN
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.java.product -data /home/piyush/Downloads/Spring/Spring With Hibernate
+
+!ENTRY ch.qos.logback.classic 1 0 2025-03-08 12:29:57.502
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2025-03-08 12:29:59.011
+!MESSAGE Logback config file: /home/piyush/Downloads/Spring/Spring With Hibernate/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.7.0.20241001-1350.xml
+!SESSION 2025-03-08 13:43:14.500 -----------------------------------------------
+eclipse.buildId=4.34.0.20241128-0756
+java.version=21.0.5
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_IN
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.java.product -data /home/piyush/Downloads/Spring/Spring With Hibernate
+
+!ENTRY ch.qos.logback.classic 1 0 2025-03-08 13:43:16.503
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2025-03-08 13:43:17.509
+!MESSAGE Logback config file: /home/piyush/Downloads/Spring/Spring With Hibernate/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.7.0.20241001-1350.xml

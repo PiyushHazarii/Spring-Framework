@@ -3,7 +3,7 @@ package me.main;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class Main { 
+public class Main {  
 	public static void main(String[] args) throws 
 	ClassNotFoundException, SQLException{
 		
@@ -16,3 +16,7 @@ public class Main {
 		System.out.println("Success");
 	}
 }
+// all the other part are in the screen shot so we can read that on 
+// my spring and spring boot notes git hub.
+// hikari wala mein sirf upar ka parts change hua baaki cut copy paste hai
+// normal preparedStatement and statement wale se. 
