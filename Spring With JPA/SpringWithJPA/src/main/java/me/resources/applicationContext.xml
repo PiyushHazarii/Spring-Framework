@@ -1,22 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans 
-	http://www.springframework.org/schema/beans/spring-beans.xsd">
-	
-	<bean class = "org.springframework.jdbc.datasource.DriverManagerDataSource" 
-	id = "dmDataSource">
-	<property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
-	<property name="url" value="jdbc:mysql://localhost:3306/hibernate"/>
-	<property name="username" value="root"/>
-	<property name="password" value="piyush"></property>
-	
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	 http://www.springframework.org/schema/beans/spring-beans.xsd 
+	 http://www.springframework.org/schema/context  
+	 http://www.springframework.org/schema/context/spring-context.xsd">
+
+<context:annotation-config />
+
+	<bean class="org.springframework.jdbc.datasource.DriverManagerDataSource"
+		id="dmDataSource">
+		<property name="driverClassName" value="com.mysql.cj.jdbc.Driver" />
+		<property name="url" value="jdbc:mysql://localhost:3306/hibernate" />
+		<property name="username" value="root" />
+		<property name="password" value="piyush.hazari11"></property>
+
+	</bean>
+
+	<bean
+		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean"
+		id="lcontainerEntityManagerFactoryBean">
+		<property name="dataSource" ref="dmDataSource" />
+		
+		<property name="packagesToScan">
+			<list>
+				<value>me.entity</value>
+			</list>
+		</property>
+		
+		<property name="jpaVendorAdapter">
+			<bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter" />
+		</property>
+
+		<property name="jpaProperties">
+			<props>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
+				<prop key="hibernate.show_sql">true</prop>
+			</props>
+		</property>
 	</bean>
 	
-	<bean class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean"
-	id="lcemfb">
-	<property name="" value="" />
-	<property name="" value="" />
-	<property name="" value="" />
+	<bean class="me.dao.StudentDaoImpl" id="studentImpl">
 	</bean>
+
+
 </beans>

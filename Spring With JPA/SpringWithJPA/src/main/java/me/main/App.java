@@ -1,17 +1,19 @@
 package me.main;
 
-import org.springframework.jdbc.datasource.DriverManagerDataSource;
-import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-/**
- * Hello world!
- *
- */
+import me.dao.StudentDAO;
 public class App 
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
-        LocalContainerEntityManagerFactoryBean lcemf = new LocalContainerEntityManagerFactoryBean();
+        ApplicationContext context = new 
+        		ClassPathXmlApplicationContext("me/resources/applicationContext.xml");
+       StudentDAO studentDAO = (StudentDAO) context.getBean("studentImpl");
+       
+       studentDAO.searchStudent(1);
+        
+       
     }
 }
