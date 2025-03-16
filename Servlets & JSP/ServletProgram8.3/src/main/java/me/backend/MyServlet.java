@@ -10,6 +10,10 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
+
+// is page ka meaning hai ki agar sahi email and pass nhi diya to wo error do dega hi 
+// uske sath sath wo phir se login page yani ki index.html wala page open kr dega 
+// then loop meion hote rahega ye kam jab tak wo sahi email and pass nhi de deta tab tak
 @WebServlet("/aaa")
 public class MyServlet extends HttpServlet{
 
@@ -19,6 +23,8 @@ public class MyServlet extends HttpServlet{
 		String myemail = req.getParameter("myemail");
 		String  mypass = req.getParameter("mypass");
 		
+		// include and forward ke case wo url mein koi change nhi krta hai bus request ko
+		// aage piche krta hai   
 		if(myemail.equals("aaa@gmail.com") && mypass.equals("piyush")) {
 			RequestDispatcher requestDispatcher = req.getRequestDispatcher("/profile.html");
 			requestDispatcher.forward(req, resp);
